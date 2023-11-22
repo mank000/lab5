@@ -57,7 +57,7 @@ void dynamic_solution_1() {
 */
 void solution_2() {
 	int array[MAX];
-	int arr_size, saved;
+	int arr_size;
 	cout << "Введите чётное число: ";
 	cin >> arr_size; 
 	if (arr_size % 2 != 0 or arr_size <= 0) { 
@@ -71,6 +71,7 @@ void solution_2() {
 		cout << array[i] << '\t';
 	};
 	for (int i = 0; i <= arr_size / 2 - 1; i++) {
+		int saved;
 		saved = array[i];
 		array[i] = array[arr_size/2 + i];
 		array[arr_size/2 + i] = saved;
@@ -92,7 +93,7 @@ void dynamic_solution_2() {
 	for (int i = 0; i < arr_size; i++) { 
 		cout << array[i] << '\t';
 	};
-	for (int i = 0; i != arr_size / 2 -1; i++) {
+	for (int i = 0; i <= arr_size / 2 - 1; i++) {
 		int saved;
 		saved = array[i];
 		array[i] = array[arr_size / 2 + i];
